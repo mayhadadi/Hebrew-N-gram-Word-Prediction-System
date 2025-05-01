@@ -1,0 +1,119 @@
+number of key-value pairs sent from the mappers to the reducers:
+with combiner:
+step 1 - 
+	Map output records = 88045604  //מספר הזוגות שנשלחו מהמפארים לקומביינרים
+	Combine input records=88045604 //מספר הזוגות שהתקבלו לקומביינרים
+	Combine output records=639718 //מספר הזוגות שנשלחו מהקומביינרים לרדיוסרים
+	Reduce input records=639718 //מספר הזוגות שהתקבלו לרדיוסרים
+	Map output bytes=1003213944 //גודל הקבצים שנשלחו מהמאפרים לרדיוסרים
+
+step 2 -
+	Map output records=116105826
+	Combine input records=116105826
+	Combine output records=2597858
+	Reduce input records=2597858
+	Map output bytes=2826437392
+
+step 3 -
+	Map output records=14240870
+	Combine input records=14240870
+	Combine output records=360173
+	Reduce input records=360173
+	Map output bytes=468508334
+
+step 4a -
+	Map output records=5038376	
+	Reduce input records=5038376
+	Map output bytes=156628535
+
+step 4b - 
+	Map output records=1800853
+	Reduce input records=1800853
+	Map output bytes=93564927
+
+step 5 -
+	Map output records=360170
+	Reduce input records=360170
+	Map output bytes=13371270
+
+without combiner:
+step 1 - 
+	Map output records=88045604
+	Reduce input records=88045604
+	Map output bytes=1003213944
+
+step 2 -
+	Map output records=116105826
+	Reduce input records=116105826
+	Map output bytes=2826437392
+
+step 3 -
+	Map output records=14240870
+	Reduce input records=14240870
+	Map output bytes=468508334
+
+step 4a -
+	Map output records=5038376
+	Reduce input records=5038376
+	Map output bytes=156628535
+
+step 4b -
+	Map output records=1800853
+	Reduce input records=1800853
+	Map output bytes=93564927
+
+step 5 -
+	Map output records=360170
+	Reduce input records=360170
+	Map output bytes=13371270
+
+scalability:
+google n-grams with 3 mappers - ~26 minutes
+google n-grams with 6 mappers - ~16 minutes
+example n-grams with 3 mappers - ~12 minutes
+example n-grams with 6 mappers - ~10 minutes
+
+interesting word pairs:
+אברהם אבינו:
+1. הראשון
+2. אמר
+3. שהוא
+4. אלא 
+5. עשה
+
+כך נוצר:
+1. מצב
+2. קשר
+3. הרושם
+4. גם
+5. מתח
+
+בקונגרס העולמי:
+1. הרביעי
+2. החמישי
+3. השביעי
+4. השמיני
+5. השלישי
+
+מאז ימי:
+1. הביניים
+2. בראשית
+3. המלחמה
+4. קדם
+5. מלחמת
+
+הגדול ביותר:
+1. בקרב
+2. בתחום
+3. שלה
+4. מאז
+5. בירושלים
+
+צריך אני:
+1. לעשות
+2. לדעת
+3. להודות
+4. לספר
+5. לכתוב
+
+בחירת המילים נראית הגיונית, ויוצרות רצף הגיוני של שלוש מילים בשפה העברית.
